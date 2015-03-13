@@ -10,8 +10,14 @@ namespace VendEngineVending
 		 * 
 		 * 
 		 */
+		
+		public static string[] addresses;
+		public static int max_timeout;
+		
+		
 		public ConnectionHeartbeat ()
 		{
+			
 		}
 	}
 }
