@@ -42,6 +42,7 @@
     <Compile Include="Talk2Me.cs" />
     <Compile Include="ConnectionHeartbeat.cs" />
     <Compile Include="ConfigGrabber.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
