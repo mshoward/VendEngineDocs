@@ -6,6 +6,7 @@ namespace VendEngineVending
 	{
 		public Auth ()
 		{
+			
 		}
 	}
 }

@@ -131,37 +131,46 @@ namespace VendEngineVending
 		
 		public static bool init()
 		{
+			
 		}
 		
 		public static bool ready()
 		{
+			
 		}
 		
 		public static bool wait()
 		{
+			
 		}
 		
 		public static bool selection()
 		{
+			
 		}
 		
 		public static bool auth()
 		{
+			
 		}
 		public static bool funds()
 		{
+			
 		}
 		
 		public static bool vending()
 		{
+			
 		}
 		
 		public static bool dump()
 		{
+			
 		}
 		
 		public static bool failure()
 		{
+			
 		}
 	}
 }

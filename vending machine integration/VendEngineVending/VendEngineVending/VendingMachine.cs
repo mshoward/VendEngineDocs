@@ -6,6 +6,7 @@ namespace VendEngineVending
 	{
 		public VendingMachine ()
 		{
+			//TODO I'm not sure how inventory is handled atm
 		}
 	}
 }

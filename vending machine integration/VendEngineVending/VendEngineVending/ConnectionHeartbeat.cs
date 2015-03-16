@@ -34,8 +34,8 @@ namespace VendEngineVending
 			
 			timeout_tester = new System.Timers.Timer();
 			timeout_tester.Interval = min_sec_timeout_test * 1000;
-			timeout_tester.Enabled = true;
 			timeout_tester.Elapsed += new System.Timers.ElapsedEventHandler(test_timeout);
+			timeout_tester.Enabled = false;
 			
 			timeout_timer = new System.Timers.Timer();
 			timeout_timer.Interval = max_sec_timeout * 1000;
@@ -49,7 +49,7 @@ namespace VendEngineVending
 			//TODO
 		}
 		
-		public static void monitor_connection()
+		public static void monitor_connection_CALL_ONCE()
 		{
 			timeout_tester.Stop();
 			timeout_tester.Start();
