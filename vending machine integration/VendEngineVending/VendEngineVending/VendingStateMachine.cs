@@ -46,9 +46,18 @@ namespace VendEngineVending
 	
 	public class VendingStateMachine
 	{
-		
+		private static VendingStates curr_state;
+		public static VendingStates Current_State
+		{
+			get{
+				return curr_state;
+			}
+			protected set{
+			}
+		}
 		public static System.Collections.Generic.Dictionary
 			<Tuple<VendingStates, bool>, VendingStates> State_Transition;
+		
 		
 		public VendingStateMachine ()
 		{
@@ -93,6 +102,67 @@ namespace VendEngineVending
 			                     VendingStates.FAILURE);
 			
 		}// end CONSTRUCTOR
+		
+		public static void Next_State()
+		{
+			switch(curr_state)
+			{
+			case VendingStates.INIT:
+				break;
+			case VendingStates.READY:
+				break;
+			case VendingStates.WAIT:
+				break;
+			case VendingStates.SELECTION:
+				break;
+			case VendingStates.AUTH:
+				break;
+			case VendingStates.FUNDS:
+				break;
+			case VendingStates.VENDING:
+				break;
+			case VendingStates.DUMP:
+				break;
+			case VendingStates.FAILURE:
+				break;
+				
+			}//end switch / case
+		}
+		
+		public static bool init()
+		{
+		}
+		
+		public static bool ready()
+		{
+		}
+		
+		public static bool wait()
+		{
+		}
+		
+		public static bool selection()
+		{
+		}
+		
+		public static bool auth()
+		{
+		}
+		public static bool funds()
+		{
+		}
+		
+		public static bool vending()
+		{
+		}
+		
+		public static bool dump()
+		{
+		}
+		
+		public static bool failure()
+		{
+		}
 	}
 }
 

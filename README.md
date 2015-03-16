@@ -39,3 +39,8 @@ VendEngine Documentation / Code
   * control center for the software
   * will define how the software reacts to events
 
+### Requested Features
+
+* Email capability when it detects a mechanical failure in the vending machine
+
+
