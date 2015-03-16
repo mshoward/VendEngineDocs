@@ -12,18 +12,14 @@ namespace VendEngineVending
 	enum VendingStates //States in a transaction process
 	{
 		INIT,
-		READY_TO_BEGIN,
-		WAIT_FOR_CONNECTION,
-		SELECTION_MADE,
-		AUTH_PROVIDED,
-		VALID_AUTH,
-		INVALID_AUTH,
-		VERIFY_FUNDS,
-		SUFFICIENT_FUNDS,
-		INSUFFICIENT_FUNDS,
-		VENDING_ITEM,
-		VEND_COMPLETE,
+		READY,
+		WAIT,
+		SELECTION,
+		AUTH,
+		FUNDS,
+		VENDING,
 		
+		DUMP,
 		FAILURE
 	}
 	
@@ -51,9 +47,52 @@ namespace VendEngineVending
 	public class VendingStateMachine
 	{
 		
+		public static System.Collections.Generic.Dictionary
+			<Tuple<VendingStates, bool>, VendingStates> State_Transition;
+		
 		public VendingStateMachine ()
 		{
-		}
+			State_Transition = new System.Collections.Generic.Dictionary
+			<Tuple<VendingStates, bool>, VendingStates>();
+			
+			//set up transition matrix
+			//INIT
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.INIT, true),
+			                     VendingStates.READY);
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.INIT, false),
+			                     VendingStates.READY);
+			//READY
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.READY, true),
+			                     VendingStates.SELECTION);
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.READY, false),
+			                     VendingStates.WAIT);
+			//WAIT
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.WAIT, true),
+			                     VendingStates.READY);
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.WAIT, false),
+			                     VendingStates.WAIT);
+			//SELECTION
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.SELECTION, true),
+			                     VendingStates.AUTH);
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.SELECTION, false),
+			                     VendingStates.DUMP);
+			//AUTH
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.AUTH, true),
+			                     VendingStates.FUNDS);
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.AUTH, false),
+			                     VendingStates.DUMP);
+			//FUNDS
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.FUNDS, true),
+			                     VendingStates.VENDING);
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.FUNDS, false),
+			                     VendingStates.DUMP);
+			//VENDING
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.VENDING, true),
+			                     VendingStates.READY);
+			State_Transition.Add(new Tuple<VendingStates, bool>(VendingStates.VENDING, false),
+			                     VendingStates.FAILURE);
+			
+		}// end CONSTRUCTOR
 	}
 }
 

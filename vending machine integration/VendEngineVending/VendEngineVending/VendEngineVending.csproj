@@ -43,6 +43,7 @@
     <Compile Include="ConnectionHeartbeat.cs" />
     <Compile Include="ConfigGrabber.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="Auth.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
