@@ -64,8 +64,11 @@ namespace VendEngineVending
 		*/
 		
 		public static string configFileName = "VendEngineVendingMachine.conf";
+		
 		//Configurable settings
 		public static System.Collections.Generic.List<string> addr = ConnectionHeartbeat.addresses;
+		//todo Talk2Me.LogLevel
+		
 		
 		
 		//private param_val_pair curr_pair;
