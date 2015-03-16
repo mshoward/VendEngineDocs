@@ -11,7 +11,7 @@ namespace VendEngineVending
 		 * 
 		 */
 		
-		public static string[] addresses;
+		public static System.Collections.Generic.List<string> addresses;
 		public static int max_timeout;
 		
 		
