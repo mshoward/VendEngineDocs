@@ -1,0 +1,47 @@
+OpenEMR Backend:
+	auth.inc			User authorization functions
+	sql.inc				SQL functions
+	lists.inc			List functions
+	transactions.inc	Transaction functions
+	pnotes.inc			Patient note functions
+	onotes.inc			Office note functions
+	forms.inc			Form functions
+	billing.inc			Billing functions
+	log.inc				OpenEMR internal logging functions
+	patient.inc			Demographics functions
+	report.inc			Reporting functions
+	encounter.inc		Encounter session variable functions
+	pid.inc				PID session variable functions
+
+
+HealthEngine Architecture:
+	Custom Interface implementing the OpenEMR backend
+		Interface uses Bootstrap script and css libraries
+		Interface written in php
+		Prebuilt SQL statements for creating new tables for forms, utilizing builtins from OpenEMR
+	Backend interfacing with the OpenEMR?
+		Unified Interface to talk to VendEngine systems and JMS.
+		
+
+
+Project Plan:
+	Phase 1: Design and Analysis				IP
+		1.1: Interface Parts and Features		Drafted
+			1.1.0: Features List				Drafted
+			1.1.1: Login Pieces					Drafted
+			1.1.2: Dashboard					Drafted
+			1.1.3: Timeline						Drafted
+			1.1.4: Planning						Drafted
+			1.1.5: Viewing						Drafted
+			1.1.6: Reporting					Drafted
+			1.1.7: Further Requirements...		IP
+		1.2: Backend Parts and Features			Drafted
+		1.3: Security Parts and Features		IP
+		1.4: Verification by Client
+	Phase 2: Implentation
+		2.1: Rolling Release Paradigm for Features
+			2.1.1: Interface Implentation
+			2.1.2: Backend Implentation
+			2.1.3: Security Implentation
+			2.1.4: Maintainence & Bug fixes
+********** TODO ***********

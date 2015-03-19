@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="VendEngineVending/ConnectionHeartbeat.cs">
+    <Files>
+      <File FileName="VendEngineVending/Utils.cs" Line="5" Column="22" />
+      <File FileName="VendEngineVending/Talk2Me.cs" Line="13" Column="3" />
+      <File FileName="VendEngineVending/ConfigGrabber.cs" Line="72" Column="3" />
+      <File FileName="VendEngineVending/Auth.cs" Line="9" Column="4" />
+      <File FileName="VendEngineVending/VendingMachine.cs" Line="9" Column="52" />
+      <File FileName="VendEngineVending/Main.cs" Line="11" Column="30" />
+      <File FileName="VendEngineVending/ConnectionHeartbeat.cs" Line="39" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

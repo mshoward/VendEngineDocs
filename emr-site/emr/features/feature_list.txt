@@ -1,0 +1,15 @@
+Functions:
+	Login
+	Dashboard
+	Timeline
+	Planning
+	Viewing
+	Reporting
+
+
+Intake:
+	Interview Patient -- Medical Staff Receiving Screening Form
+	Patient's Consent for Treatment Form
+	CIWA???
+	Mental Health Survey (Clinical Pathway/Mental Health Services)
+	Authorization for Release of Patient Medical Record to Correctional Facility
