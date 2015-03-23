@@ -72,4 +72,5 @@
 LOGIN_PAGE;
 
 echo $login_page;
+phpinfo();
 ?>
