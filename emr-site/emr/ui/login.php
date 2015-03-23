@@ -1,4 +1,6 @@
 <?php
+	include_once "../lib/global_includes.php";
+	
 	$login_page = <<<LOGIN_PAGE
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +28,15 @@
 	<body>
 		<div class="jumbotron">
 			<div class="container">
-				<h1>This... <small>is the login page!</small></h1>
-				<p>Ideally, this is where you'd log in...</p>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="res/red_cross.png" alt="HealthEngine Red Cross" style="width:150px; height:150px;">
+					</div>
+					<div class="col-md-8">
+						<h1>HealthEngine</h1>
+						<p>Easymode EMR</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="container"></div>
@@ -35,25 +44,22 @@
 			
 				<div class="col-md-6">
 					<div class="well">
-						<h1>Hello, world!</h1>
-						<p class="lead">Pretend this is a decently sized paragraph summarizing.</p>
-						<p>And this is a much larger paragraph giving details and such. <small>With some fine print.</small></p>
-						<p><s>This is an erroneous paragraph.</s></p>
-						
+						<h1>Welcome to HealthEngine</h1>
+						<p class="lead">Please login to access the system.</p>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="well well-lg">
-						<form>
+						<form action="login_redirect.php" method="post">
 							<div class="form-group">
 								<div class="input-group input-group-lg">
-									<span class="input-group-addon" id="sizing-addon1">Username</span>
-									<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+									<label class="input-group-addon"  id="sizing-addon1" for="login_username">Username</label>
+									<input id="login_username" type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
 								</div>
 								<br>
 								<div class="input-group input-group-lg">
-									<span class="input-group-addon" id="sizing-addon1">Password</span>
-									<input type="password" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+									<label id="sizing-addon2" class="input-group-addon" for="login_password">Password</label>
+									<input id="login_password" type="password" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
 								</div>
 							</div>
 						</form>
