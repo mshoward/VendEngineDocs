@@ -27,6 +27,9 @@
 		//attribute handling goes here
 		public $attr_vals = array();
 		const equals = '=';
+		const tag_open_bracket = '<';
+		const tag_close_bracket = '>';
+		const tag_slash = '/';
 		
 		public function __construct()
 		{
@@ -50,5 +53,11 @@
 			}
 			return $str;
 		}
+		
+		public function __toString()
+		{
+			return attr_vals_to_str();
+		}
+		
 	}
 ?>
