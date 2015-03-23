@@ -62,10 +62,12 @@
 									<input id="login_password" type="password" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
 								</div>
 							</div>
+							<button type="submit" class="btn btn-default">Submit</button>
 						</form>
 					</div>
 				</div>
 			</div>
+			
 		</div>
 	</body>
 </html>
